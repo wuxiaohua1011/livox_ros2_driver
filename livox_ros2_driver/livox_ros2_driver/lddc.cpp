@@ -177,7 +177,8 @@ uint32_t Lddc::PublishPointcloud2(LidarDataQueue *queue, uint32_t packet_num,
     }
     /** Use the first packet timestamp as pointcloud2 msg timestamp */
     if (!published_packet) {
-      cloud.header.stamp = rclcpp::Time(timestamp);
+      // cloud.header.stamp = rclcpp::Time(timestamp);
+      cloud.header.stamp = ros_clock_.now();
     }
     uint32_t single_point_num = storage_packet.point_num * echo_num;
 

@@ -46,6 +46,8 @@ find_library(LIVOX_SDK_LIBRARY liblivox_sdk_static.a /usr/local/lib)
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+include_directories(/opt/ros/foxy/include/)
+
 # livox ros2 driver target
 ament_auto_add_library(${PROJECT_NAME} SHARED
   livox_ros2_driver/lvx_file.cpp

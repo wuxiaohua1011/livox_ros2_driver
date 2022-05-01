@@ -23,7 +23,7 @@ def generate_launch_description():
             {
                 "xfer_format": 0  # 0-Pointcloud2(PointXYZRTL), 1-customized pointcloud format
             },
-            {"multi_topic": 0},
+            {"multi_topic": 1},
             {"data_src": 0},
             {
                 "publish_freq": launch.substitutions.LaunchConfiguration(
